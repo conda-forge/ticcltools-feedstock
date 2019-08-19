@@ -11,7 +11,7 @@ source:
   sha256: "10c243b2f45da86b4a40cb37af78b45bcd6756e5035d43af99fc47043711cdb0"
 
 build:
-  number: 1
+  number: 1000
   skip: True  # [win]
   run_exports:
     - ticcltools
