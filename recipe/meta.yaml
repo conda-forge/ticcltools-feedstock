@@ -1,5 +1,5 @@
 {% set name = "ticcltools" %}
-{% set version = "0.6" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/LanguageMachines/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "10c243b2f45da86b4a40cb37af78b45bcd6756e5035d43af99fc47043711cdb0"
+  sha256: 0f819e42bab1f236e3089887ef45c887fb5d2ce25759001c3d77b1d739acec01
 
 build:
-  number: 1000
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
   run_exports:
     - ticcltools
 
