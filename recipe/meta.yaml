@@ -22,12 +22,13 @@ requirements:
     - autoconf
     - autoconf-archive
     - automake
+    - make
     - libtool
     - pkg-config
   host:
-    - ticcutils
+    - ticcutils >=0.28
   run:
-    - ticcutils
+    - ticcutils >=0.28
 
 test:
   commands:
