@@ -1,5 +1,5 @@
 {% set name = "ticcltools" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/LanguageMachines/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0f819e42bab1f236e3089887ef45c887fb5d2ce25759001c3d77b1d739acec01
+  sha256: 8f2002401b11c3a210a9dbab55aff7a16d4209b3a74d324219e272d587986cb9
 
 build:
   number: 0
@@ -22,12 +22,13 @@ requirements:
     - autoconf
     - autoconf-archive
     - automake
+    - make
     - libtool
     - pkg-config
   host:
-    - ticcutils
+    - ticcutils >=0.28
   run:
-    - ticcutils
+    - ticcutils >=0.28
 
 test:
   commands:
@@ -38,7 +39,7 @@ test:
 
 about:
   home: https://github.com/LanguageMachines/ticcltools
-  license: GPL-3.0
+  license: GPL-3.0-only
   license_family: GPL
   license_file: COPYING
   summary: 'Tools for TICCL: Text Induced Corpus-Cleanup'
