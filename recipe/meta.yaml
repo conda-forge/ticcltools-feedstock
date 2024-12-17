@@ -1,5 +1,5 @@
 {% set name = "ticcltools" %}
-{% set version = "0.10" %}
+{% set version = "0.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/LanguageMachines/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 2289f4595e2feef191831cfe4d782104641da3b75c513176c984ad4a4b21a211
+  sha256: 4c44d4b21ab4940d12a8a278bf726e2dd4f73957ede94b4aad19b4e82c421e45
 
 build:
   number: 0
@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - autoconf
     - autoconf-archive
     - automake
